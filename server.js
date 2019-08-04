@@ -39,9 +39,7 @@ app.use(express.static('public'));
 
 
 app.get("/", (req,res) => {
-    res.sendFile(indexPath,{
-        dotFiles: "js"
-    })
+    res.sendFile('./build/index.html')
 })
 
 app.get("/todo/:id", (req,res) => {
